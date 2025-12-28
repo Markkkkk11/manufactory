@@ -189,6 +189,26 @@
         text-decoration: none;
         letter-spacing: 0.08em;
       }
+
+      @media (max-width: 640px) {
+        .grid {
+          grid-template-columns: repeat(2, minmax(140px, 1fr));
+          gap: 12px;
+        }
+        .card-img {
+          padding-top: 68%;
+        }
+        .card-body {
+          padding: 10px 10px 12px;
+        }
+        .card-title {
+          font-size: 12px;
+          letter-spacing: 0.08em;
+        }
+        .card-desc {
+          font-size: 11px;
+        }
+      }
     </style>
   </head>
   <body>
