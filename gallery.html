@@ -444,6 +444,33 @@
         grid.appendChild(card);
       });
 
+      // Add back-to-top button at the end of the grid
+      const upBtn = document.createElement('button');
+      upBtn.type = 'button';
+      upBtn.textContent = '↑ Вверх';
+      upBtn.style.marginTop = '12px';
+      upBtn.style.padding = '10px 12px';
+      upBtn.style.border = '1px solid rgba(243, 201, 120, 0.4)';
+      upBtn.style.background = 'rgba(243, 201, 120, 0.08)';
+      upBtn.style.color = '#f3c978';
+      upBtn.style.letterSpacing = '0.12em';
+      upBtn.style.textTransform = 'uppercase';
+      upBtn.style.fontSize = '12px';
+      upBtn.style.cursor = 'pointer';
+      upBtn.style.borderRadius = '2px';
+      upBtn.style.width = '100%';
+      upBtn.style.maxWidth = '320px';
+      upBtn.style.alignSelf = 'center';
+      upBtn.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+      const upWrap = document.createElement('div');
+      upWrap.style.display = 'flex';
+      upWrap.style.justifyContent = 'center';
+      upWrap.style.marginTop = '10px';
+      upWrap.appendChild(upBtn);
+      grid.parentElement.appendChild(upWrap);
+
       // Mobile lightbox
       const lightbox = document.getElementById('lightbox');
       const lightboxImg = document.getElementById('lightbox-img');
